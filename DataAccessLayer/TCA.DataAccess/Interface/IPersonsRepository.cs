@@ -8,7 +8,7 @@ using TCA.Entities.Models;
 
 namespace TCA.DataAccess.Interface
 {
-    public interface IPersonsRepository : IBaseRepository<Persons>
+    public interface IPersonsRepository : IBaseRepository<PersonsPositionsHolding>
     {
 
     }

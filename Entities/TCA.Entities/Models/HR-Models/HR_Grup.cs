@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace TCA.Entities.Models
 {
-    public class Values<T> where T : class,new()
+    public class HR_Grup : BaseEntity
     {
-        public List<T> VALUES { get; set; }
+        public int? GrupKodu { get; set; }
+        public string Tanim { get; set; }
     }
 }

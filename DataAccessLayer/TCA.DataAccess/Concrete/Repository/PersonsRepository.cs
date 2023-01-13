@@ -10,7 +10,7 @@ using TCA.Entities.Models;
 
 namespace TCA.DataAccess.Concrete.Repository
 {
-    public class PersonsRepository : BaseRepository<Persons>, IPersonsRepository
+    public class PersonsRepository : BaseRepository<PersonsPositionsHolding>, IPersonsRepository
     {
         private readonly ApplicationDbContext _context;
 

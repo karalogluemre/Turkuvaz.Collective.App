@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TCA.Entities.Models
 {
-    public class PeopleSourceAccess : IEntity
+    public class PeopleSourceAccess : BaseEntity
     {
         public string MANDT { get; set; }
         public string PERNR { get; set; }

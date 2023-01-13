@@ -9,5 +9,6 @@ namespace TCA.Business.GenericService
     public interface IHttpGenericService<T> where T:class,new()
     {
         Task<List<T>> GetAllModel(string userName,string password);
+        Task<List<T>> GetValuesAndBrevityAllModel(string userName,string password);
     }
 }

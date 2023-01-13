@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TCA.Entities.Models
 {
-    public class Persons : IEntity
+    public interface IEntity
     {
     }
 }

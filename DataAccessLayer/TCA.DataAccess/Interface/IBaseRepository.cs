@@ -7,7 +7,7 @@ using TCA.Entities;
 
 namespace TCA.DataAccess.Interface
 {
-    public interface IBaseRepository<T> where T : class, IEntity, new()
+    public interface IBaseRepository<T> where T : class, new()
     {
         List<T> GetList();
         void Add(T entity);

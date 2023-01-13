@@ -9,6 +9,6 @@ namespace TCA.Business.Interface
 {
     public interface IPersonsService 
     {
-        IEnumerable<Persons> GetListPersons();
+        IEnumerable<PersonsPositionsHolding> GetListPersons();
     }
 }

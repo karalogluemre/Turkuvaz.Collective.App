@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TCA.Entities
+namespace TCA.Entities.Models
 {
-    public interface IEntity
+    public class HR_Sertifika
     {
     }
 }

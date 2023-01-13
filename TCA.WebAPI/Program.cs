@@ -17,7 +17,14 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IPersonsService, PersonsManager>();
 builder.Services.AddScoped(typeof(IHttpGenericService<>), typeof(HttpGenericService<>));
 builder.Services.AddScoped<IPeoplesSourceAccessService, PeopleSourceAccessManager>();
+builder.Services.AddScoped<IPersonsPositionsDR, PersonPositionsDRManager>();
+builder.Services.AddScoped<IPersonsPositionsHolding, PersonsPositionsHoldingManager>();
+builder.Services.AddScoped<IAdressesHoldingService, AdressesHoldingManager>();
 builder.Services.AddScoped<IActivePassiveUsersService, ActivePassiveUsersManager>();
+builder.Services.AddScoped<IOrganizationLewelHoldingService, OrganizationLewelHoldingManager>();
+builder.Services.AddScoped<IOrganizationLewelDrService, OrganizationLewelDRManager>();
+builder.Services.AddScoped<IAllPersonsInfoDRServices, AllPersonsInfoDRManager>();
+builder.Services.AddScoped<IAllPersonsInfoService, AllPersonsInfoManager>();
 
 #region JWT TOKEN - 1
 builder.Services.AddSwaggerGen(options =>
@@ -59,6 +66,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(
 
 #endregion
 
+#region Temp Db 
+builder.Services.AddDbContext<CollectiveServiceTestDBContext>(
+                options => options.UseSqlServer(builder.Configuration.GetConnectionString("CollectiveServiceConnection")));
+#endregion
+
 #region JWT TOKEN - 2
 builder.Services.AddAuthentication(options =>
 {
@@ -89,13 +101,13 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
 
-    #region JWT TOKEN -3
+    #region Swagerr
 
     app.UseSwaggerUI(options =>
     {
+
         options.SwaggerEndpoint("/swagger/V1/swagger.json", "Product WebAPI");
     });
-
     #endregion
 
 }

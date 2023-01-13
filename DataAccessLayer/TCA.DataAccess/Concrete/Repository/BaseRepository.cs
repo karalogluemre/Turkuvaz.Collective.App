@@ -9,7 +9,7 @@ using TCA.Entities;
 
 namespace TCA.DataAccess.Concrete.Repository
 {
-    public class BaseRepository<T> : IBaseRepository<T> where T : class, IEntity, new()
+    public class BaseRepository<T> : IBaseRepository<T> where T : class, new()
     {
         public ApplicationDbContext _context;
         public BaseRepository(ApplicationDbContext context)

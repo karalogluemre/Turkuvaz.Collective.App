@@ -19,7 +19,7 @@ namespace TCA.Business.Concrete
         {
             _unitOfWork = unitOfWork;
         }
-        public IEnumerable<Persons> GetListPersons()
+        public IEnumerable<PersonsPositionsHolding> GetListPersons()
         {
             return _unitOfWork.persons.GetList();
         }
